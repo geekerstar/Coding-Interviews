@@ -8,9 +8,9 @@ import java.util.ArrayList;
  * @Description:使用递归
  */
 public class Solution2 {
-    public ArrayList<Integer> printListFromTailToHead(ListNode listNode){
+    public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
         ArrayList<Integer> ret = new ArrayList<>();
-        if (listNode != null){
+        if (listNode != null) {
             ret.addAll(printListFromTailToHead(listNode.next));
             ret.add(listNode.val);
         }

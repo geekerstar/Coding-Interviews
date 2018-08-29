@@ -11,12 +11,12 @@ public class Solution {
     Stack<Integer> in = new Stack<>();
     Stack<Integer> out = new Stack<>();
 
-    public void push(int node){
+    public void push(int node) {
         in.push(node);
     }
 
-    public int pop() throws Exception{
-        if(out.isEmpty())
+    public int pop() throws Exception {
+        if (out.isEmpty())
             while (!in.isEmpty())
                 out.push(in.pop());
 
