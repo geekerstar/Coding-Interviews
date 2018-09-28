@@ -16,8 +16,17 @@ public class Solution {
             listNode = listNode.next;
         }
         ArrayList<Integer> ret = new ArrayList<>();
-        while (!stack.isEmpty())
+        while (!stack.isEmpty()) {
             ret.add(stack.pop());
+        }
         return ret;
+    }
+
+    public class ListNode {
+        int val;
+        ListNode next = null;
+        ListNode(int val) {
+            this.val = val;
+        }
     }
 }

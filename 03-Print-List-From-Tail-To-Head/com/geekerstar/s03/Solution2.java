@@ -16,4 +16,12 @@ public class Solution2 {
         }
         return ret;
     }
+
+   public class ListNode {
+       int val;
+       ListNode next = null;
+       ListNode(int val) {
+           this.val = val;
+       }
+   }
 }
