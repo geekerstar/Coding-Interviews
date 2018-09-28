@@ -12,12 +12,15 @@ public class Solution2 {
             int high = array[i].length - 1;
             while (low <= high) {
                 int mid = (low + high) / 2;
-                if (target > array[i][mid])
+                if (target > array[i][mid]) {
                     low = mid + 1;
-                else if (target < array[i][mid])
+                }
+                else if (target < array[i][mid]) {
                     high = mid - 1;
-                else
+                }
+                else {
                     return true;
+                }
             }
         }
         return false;
