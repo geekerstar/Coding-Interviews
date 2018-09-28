@@ -8,9 +8,11 @@ package com.geekerstar.s02;
 public class Solution {
     public String replaceSpace(StringBuffer str) {
         int oldLen = str.length();
-        for (int i = 0; i < oldLen; i++)
-            if (str.charAt(i) == ' ')
+        for (int i = 0; i < oldLen; i++) {
+            if (str.charAt(i) == ' ') {
                 str.append("  ");
+            }
+        }
         int P1 = oldLen - 1, P2 = str.length() - 1;
         while (P1 >= 0 && P2 > P1) {
             char c = str.charAt(P1--);
