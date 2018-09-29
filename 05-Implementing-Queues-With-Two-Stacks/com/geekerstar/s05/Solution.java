@@ -16,13 +16,14 @@ public class Solution {
     }
 
     public int pop() throws Exception {
-        if (out.isEmpty())
-            while (!in.isEmpty())
+        if (out.isEmpty()) {
+            while (!in.isEmpty()) {
                 out.push(in.pop());
-
-        if (out.isEmpty())
+            }
+        }
+        if (out.isEmpty()) {
             throw new Exception("queue is empty");
-
+        }
         return out.pop();
     }
 }
