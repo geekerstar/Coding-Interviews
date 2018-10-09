@@ -19,10 +19,12 @@ public class Solution2 {
             }
             cur = cur.next;
         }
-        if (list1 != null)
+        if (list1 != null) {
             cur.next = list1;
-        if (list2 != null)
+        }
+        if (list2 != null) {
             cur.next = list2;
+        }
         return head.next;
     }
 
