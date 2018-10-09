@@ -1,31 +1,29 @@
 package com.geekerstar.s22;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
 
 /**
- * @Author: Geekerstar(QQ : 247507792)
- * @Date: 2018/8/30 18:54
- * @Description:
+ 思路是用arraylist模拟一个队列来存储相应的TreeNode
  */
 public class Solution {
     public ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
-        Queue<TreeNode> queue = new LinkedList<>();
-        ArrayList<Integer> ret = new ArrayList<>();
-        queue.add(root);
-        while (!queue.isEmpty()) {
-            int cnt = queue.size();
-            while (cnt-- > 0) {
-                TreeNode t = queue.poll();
-                if (t == null)
-                    continue;
-                ret.add(t.val);
-                queue.add(t.left);
-                queue.add(t.right);
-            }
+        ArrayList<Integer> list = new ArrayList<>();
+        ArrayList<TreeNode> queue = new ArrayList<>();
+        if (root == null) {
+            return list;
         }
-        return ret;
+        queue.add(root);
+        while (queue.size() != 0) {
+            TreeNode temp = queue.remove(0);
+            if (temp.left != null){
+                queue.add(temp.left);
+            }
+            if (temp.right != null) {
+                queue.add(temp.right);
+            }
+            list.add(temp.val);
+        }
+        return list;
     }
 
     public class TreeNode {
