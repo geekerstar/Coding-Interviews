@@ -8,19 +8,21 @@ package com.geekerstar.s06;
  * 否则解在 [m + 1, h] 之间，令 l = m + 1。
  */
 public class Solution {
-    public int minNumberInRotateArray(int[] nums) {
-        if (nums.length == 0)
+    public int minNumberInRotateArray(int [] array) {
+        if(array.length == 0){
             return 0;
-        int l = 0, h = nums.length - 1;
-        while (l < h) {
-            int m = l + (h - l) / 2;
-            if (nums[m] <= nums[h]) {
-                h = m;
-            }
-            else {
-                l = m + 1;
+        }
+        int low = 0,high = array.length - 1;
+        while(low < high){
+            int mid = low + (high - low) / 2;
+            if(array[mid] > array[high]){
+                low = mid + 1;
+            }else if(array[mid] == array[high]){
+                high = high - 1;
+            }else{
+                high = mid;
             }
         }
-        return nums[l];
+        return array[low];
     }
 }

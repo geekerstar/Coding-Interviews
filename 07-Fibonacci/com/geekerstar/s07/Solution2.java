@@ -7,8 +7,9 @@ package com.geekerstar.s07;
  */
 public class Solution2 {
     public int Fibonacci(int n) {
-        if (n <= 1)
+        if (n <= 1) {
             return n;
+        }
         int pre2 = 0, pre1 = 1;
         int fib = 0;
         for (int i = 2; i <= n; i++) {
