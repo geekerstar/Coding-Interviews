@@ -7,8 +7,9 @@ package com.geekerstar.s08;
  */
 public class Solution {
     public int JumpFloor(int n) {
-        if (n <= 2)
+        if (n <= 2) {
             return n;
+        }
         int pre2 = 1, pre1 = 2;
         int result = 1;
         for (int i = 2; i < n; i++) {
