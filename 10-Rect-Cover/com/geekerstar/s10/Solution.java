@@ -7,8 +7,9 @@ package com.geekerstar.s10;
  */
 public class Solution {
     public int RectCover(int n) {
-        if (n <= 2)
+        if (n <= 2) {
             return n;
+        }
         int pre2 = 1, pre1 = 2;
         int result = 0;
         for (int i = 3; i <= n; i++) {
