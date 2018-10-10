@@ -12,8 +12,9 @@ public class Solution {
     private ArrayList<String> ret = new ArrayList<>();
 
     public ArrayList<String> Permutation(String str) {
-        if (str.length() == 0)
+        if (str.length() == 0) {
             return ret;
+        }
         char[] chars = str.toCharArray();
         Arrays.sort(chars);
         backtracking(chars, new boolean[chars.length], new StringBuilder());
@@ -26,10 +27,13 @@ public class Solution {
             return;
         }
         for (int i = 0; i < chars.length; i++) {
-            if (hasUsed[i])
+            if (hasUsed[i]) {
                 continue;
-            if (i != 0 && chars[i] == chars[i - 1] && !hasUsed[i - 1]) /* 保证不重复 */
+            }
+            /* 保证不重复 */
+            if (i != 0 && chars[i] == chars[i - 1] && !hasUsed[i - 1]) {
                 continue;
+            }
             hasUsed[i] = true;
             s.append(chars[i]);
             backtracking(chars, hasUsed, s);

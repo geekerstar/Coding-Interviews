@@ -7,8 +7,9 @@ package com.geekerstar.s30;
  */
 public class Solution {
     public int FindGreatestSumOfSubArray(int[] nums) {
-        if (nums == null || nums.length == 0)
+        if (nums == null || nums.length == 0) {
             return 0;
+        }
         int greatestSum = Integer.MIN_VALUE;
         int sum = 0;
         for (int val : nums) {

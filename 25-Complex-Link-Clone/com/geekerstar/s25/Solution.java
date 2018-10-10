@@ -7,8 +7,9 @@ package com.geekerstar.s25;
  */
 public class Solution {
     public RandomListNode Clone(RandomListNode pHead) {
-        if (pHead == null)
+        if (pHead == null) {
             return null;
+        }
         // 插入新节点
         RandomListNode cur = pHead;
         while (cur != null) {
@@ -21,8 +22,9 @@ public class Solution {
         cur = pHead;
         while (cur != null) {
             RandomListNode clone = cur.next;
-            if (cur.random != null)
+            if (cur.random != null) {
                 clone.random = cur.random.next;
+            }
             cur = clone.next;
         }
         // 拆分

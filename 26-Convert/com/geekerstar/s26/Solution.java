@@ -15,15 +15,18 @@ public class Solution {
     }
 
     private void inOrder(TreeNode node) {
-        if (node == null)
+        if (node == null) {
             return;
+        }
         inOrder(node.left);
         node.left = pre;
-        if (pre != null)
+        if (pre != null) {
             pre.right = node;
+        }
         pre = node;
-        if (head == null)
+        if (head == null) {
             head = node;
+        }
         inOrder(node.right);
     }
 

@@ -16,9 +16,11 @@ public class Solution {
             }
         }
         int cnt = 0;
-        for (int val : nums)
-            if (val == majority)
+        for (int val : nums) {
+            if (val == majority) {
                 cnt++;
+            }
+        }
         return cnt > nums.length / 2 ? majority : 0;
     }
 }

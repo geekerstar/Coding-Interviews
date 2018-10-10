@@ -16,8 +16,9 @@ public class Solution {
     }
 
     private void backtracking(TreeNode node, int target, ArrayList<Integer> path) {
-        if (node == null)
+        if (node == null) {
             return;
+        }
         path.add(node.val);
         target -= node.val;
         if (target == 0 && node.left == null && node.right == null) {
@@ -33,10 +34,8 @@ public class Solution {
         int val = 0;
         TreeNode left = null;
         TreeNode right = null;
-
         public TreeNode(int val) {
             this.val = val;
-
         }
 
     }
