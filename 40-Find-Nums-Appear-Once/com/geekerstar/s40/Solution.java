@@ -10,14 +10,17 @@ public class Solution {
     //将num1[0],num2[0]设置为返回结果
     public void FindNumsAppearOnce(int[] nums, int num1[], int num2[]) {
         int diff = 0;
-        for (int num : nums)
+        for (int num : nums) {
             diff ^= num;
+        }
         diff &= -diff;
         for (int num : nums) {
-            if ((num & diff) == 0)
+            if ((num & diff) == 0) {
                 num1[0] ^= num;
-            else
+            }
+            else {
                 num2[0] ^= num;
+            }
         }
     }
 }
