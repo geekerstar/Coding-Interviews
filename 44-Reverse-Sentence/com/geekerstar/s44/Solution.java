@@ -22,8 +22,9 @@ public class Solution {
     }
 
     private void reverse(char[] c, int i, int j) {
-        while (i < j)
+        while (i < j) {
             swap(c, i++, j--);
+        }
     }
 
     private void swap(char[] c, int i, int j) {
