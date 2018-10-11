@@ -6,6 +6,7 @@ package com.geekerstar.s39;
  * @Description:
  */
 public class Solution {
+    //后续遍历时，遍历到一个节点，其左右子树已经遍历  依次自底向上判断，每个节点只需要遍历一次
     private boolean isBalanced = true;
 
     public boolean IsBalanced_Solution(TreeNode root) {
@@ -14,12 +15,14 @@ public class Solution {
     }
 
     private int height(TreeNode root) {
-        if (root == null || !isBalanced)
+        if (root == null || !isBalanced) {
             return 0;
+        }
         int left = height(root.left);
         int right = height(root.right);
-        if (Math.abs(left - right) > 1)
+        if (Math.abs(left - right) > 1) {
             isBalanced = false;
+        }
         return 1 + Math.max(left, right);
     }
 
