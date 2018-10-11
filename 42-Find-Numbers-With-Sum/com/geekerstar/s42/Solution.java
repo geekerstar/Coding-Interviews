@@ -13,12 +13,15 @@ public class Solution {
         int i = 0, j = array.length - 1;
         while (i < j) {
             int cur = array[i] + array[j];
-            if (cur == sum)
+            if (cur == sum) {
                 return new ArrayList<>(Arrays.asList(array[i], array[j]));
-            if (cur < sum)
+            }
+            if (cur < sum) {
                 i++;
-            else
+            }
+            else {
                 j--;
+            }
         }
         return new ArrayList<>();
     }
