@@ -15,12 +15,14 @@ public class Solution {
     }
 
     private void inOrder(TreeNode root, int k) {
-        if (root == null || cnt >= k)
+        if (root == null || cnt >= k) {
             return;
+        }
         inOrder(root.left, k);
         cnt++;
-        if (cnt == k)
+        if (cnt == k) {
             ret = root;
+        }
         inOrder(root.right, k);
     }
 
@@ -28,7 +30,6 @@ public class Solution {
         int val = 0;
         TreeNode left = null;
         TreeNode right = null;
-
         public TreeNode(int val) {
             this.val = val;
         }
