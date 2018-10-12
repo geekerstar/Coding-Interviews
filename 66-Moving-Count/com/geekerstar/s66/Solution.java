@@ -24,14 +24,17 @@ public class Solution {
     }
 
     private void dfs(boolean[][] marked, int r, int c) {
-        if (r < 0 || r >= rows || c < 0 || c >= cols || marked[r][c])
+        if (r < 0 || r >= rows || c < 0 || c >= cols || marked[r][c]) {
             return;
+        }
         marked[r][c] = true;
-        if (this.digitSum[r][c] > this.threshold)
+        if (this.digitSum[r][c] > this.threshold) {
             return;
+        }
         cnt++;
-        for (int[] n : next)
+        for (int[] n : next) {
             dfs(marked, r + n[0], c + n[1]);
+        }
     }
 
     private void initDigitSum() {
@@ -44,8 +47,10 @@ public class Solution {
             }
         }
         this.digitSum = new int[rows][cols];
-        for (int i = 0; i < this.rows; i++)
-            for (int j = 0; j < this.cols; j++)
+        for (int i = 0; i < this.rows; i++) {
+            for (int j = 0; j < this.cols; j++) {
                 this.digitSum[i][j] = digitSumOne[i] + digitSumOne[j];
+            }
+        }
     }
 }
