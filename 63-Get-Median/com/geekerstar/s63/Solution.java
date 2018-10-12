@@ -31,9 +31,11 @@ public class Solution {
     }
 
     public Double GetMedian() {
-        if (N % 2 == 0)
+        if (N % 2 == 0) {
             return (left.peek() + right.peek()) / 2.0;
-        else
+        }
+        else {
             return (double) right.peek();
+        }
     }
 }
