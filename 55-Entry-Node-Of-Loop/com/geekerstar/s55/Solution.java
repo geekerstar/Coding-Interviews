@@ -7,8 +7,9 @@ package com.geekerstar.s55;
  */
 public class Solution {
     public ListNode EntryNodeOfLoop(ListNode pHead) {
-        if (pHead == null || pHead.next == null)
+        if (pHead == null || pHead.next == null) {
             return null;
+        }
         ListNode slow = pHead, fast = pHead;
         do {
             fast = fast.next.next;

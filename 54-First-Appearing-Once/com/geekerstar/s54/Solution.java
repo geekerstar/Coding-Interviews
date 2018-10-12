@@ -15,8 +15,9 @@ public class Solution {
     public void Insert(char ch) {
         cnts[ch]++;
         queue.add(ch);
-        while (!queue.isEmpty() && cnts[queue.peek()] > 1)
+        while (!queue.isEmpty() && cnts[queue.peek()] > 1) {
             queue.poll();
+        }
     }
 
     public char FirstAppearingOnce() {
