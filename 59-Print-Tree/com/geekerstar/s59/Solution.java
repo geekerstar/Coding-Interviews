@@ -27,11 +27,13 @@ public class Solution {
                 queue.add(node.left);
                 queue.add(node.right);
             }
-            if (reverse)
+            if (reverse) {
                 Collections.reverse(list);
+            }
             reverse = !reverse;
-            if (list.size() != 0)
+            if (list.size() != 0) {
                 ret.add(list);
+            }
         }
         return ret;
     }
@@ -40,7 +42,6 @@ public class Solution {
         int val = 0;
         TreeNode left = null;
         TreeNode right = null;
-
         public TreeNode(int val) {
             this.val = val;
 
